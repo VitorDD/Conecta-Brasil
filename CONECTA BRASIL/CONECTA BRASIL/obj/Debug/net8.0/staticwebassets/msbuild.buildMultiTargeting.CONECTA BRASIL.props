@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CONECTA BRASIL.props" />
+</Project>

@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using CONECTA_BRASIL.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<CONECTA_BRASILContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CONECTA_BRASILContext") ?? throw new InvalidOperationException("Connection string 'CONECTA_BRASILContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
