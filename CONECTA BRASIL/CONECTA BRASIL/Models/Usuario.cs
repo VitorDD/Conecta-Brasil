@@ -9,18 +9,18 @@ namespace CONECTA_BRASIL.Models
 
         [Required(ErrorMessage = "Nome requerido.")]
         [Display(Name = "Nome")]
-        public string? Name { get; set; }
+        public required string Name { get; set; }
 
         [Required(ErrorMessage = "Email requerido.")]
         [Display(Name = "Email")]
-        public string? Email { get; set; }
+        public required string Email { get; set; }
 
         [Required(ErrorMessage = "Telefone requerido.")]
         [Display(Name = "Telefone")]
-        public string? Telefone { get; set; }
+        public required string Telefone { get; set; }
 
         [Required(ErrorMessage = "Senha requerido.")]
         [Display(Name = "Senha")]
-        public string? Senha { get; set; }
+        public required string Senha { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zawRVhOU9Kg=",
+  "dgSpecHash": "ELXtrp4AGhQ=",
   "success": true,
-  "projectFilePath": "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj",
+  "projectFilePath": "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Leonardo P Z\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Leonardo P Z\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

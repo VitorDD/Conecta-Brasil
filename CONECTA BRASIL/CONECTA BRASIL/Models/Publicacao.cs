@@ -18,9 +18,12 @@ namespace CONECTA_BRASIL.Models
 
         [Required(ErrorMessage = "Titulo requerido.")]
         [Display(Name = "Titulo")]
-        public string? Titulo { get; set; }
+        public required string Titulo { get; set; }
 
         [Display(Name = "Categoria")]
         public Categorias Categoria { get; set; }
+
+        [Display(Name = "Conteudo")]
+        public required string Conteudo { get; set; }
     }
 }

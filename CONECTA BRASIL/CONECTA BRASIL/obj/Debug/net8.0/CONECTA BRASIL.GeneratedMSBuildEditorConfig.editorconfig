@@ -17,99 +17,99 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CONECTA_BRASIL
 build_property.RootNamespace = CONECTA_BRASIL
-build_property.ProjectDir = C:\Backup\Faculdade\Computação aplicada regionalidade\CONECTA BRASIL\CONECTA BRASIL\
+build_property.ProjectDir = C:\Backup\Faculdade\Computação aplicada regionalidade\Conecta-Brasil\CONECTA BRASIL\CONECTA BRASIL\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Backup\Faculdade\Computação aplicada regionalidade\CONECTA BRASIL\CONECTA BRASIL
+build_property.MSBuildProjectDirectory = C:\Backup\Faculdade\Computação aplicada regionalidade\Conecta-Brasil\CONECTA BRASIL\CONECTA BRASIL
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Home/Index.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Home/Privacy.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Instituicao/Create.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Instituicao/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdGl0dWljYW9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Instituicao/Delete.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Instituicao/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdGl0dWljYW9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Instituicao/Details.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Instituicao/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdGl0dWljYW9cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Instituicao/Edit.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Instituicao/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdGl0dWljYW9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Instituicao/Index.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Instituicao/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdGl0dWljYW9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Pessoas/Create.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Pessoas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVzc29hc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Pessoas/Delete.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Pessoas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVzc29hc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Pessoas/Details.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Pessoas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVzc29hc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Pessoas/Edit.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Pessoas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVzc29hc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Pessoas/Index.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Pessoas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVzc29hc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Publicacaos/Create.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Publicacaos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNhb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Publicacaos/Delete.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Publicacaos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNhb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Publicacaos/Details.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Publicacaos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNhb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Publicacaos/Edit.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Publicacaos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNhb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Publicacaos/Index.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Publicacaos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljYWNhb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Shared/Error.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/_ViewImports.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/_ViewStart.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Backup/Faculdade/Computação aplicada regionalidade/CONECTA BRASIL/CONECTA BRASIL/Views/Shared/_Layout.cshtml]
+[C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1e2yd56ueu

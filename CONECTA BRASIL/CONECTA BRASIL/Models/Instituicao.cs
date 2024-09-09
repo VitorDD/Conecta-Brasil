@@ -7,10 +7,10 @@ namespace CONECTA_BRASIL.Models
     {
         [Required(ErrorMessage = "Área requerido.")]
         [Display(Name = "Área de atuação")]
-        public string? Atuacao { get; set; }
+        public required string Atuacao { get; set; }
 
         [Required(ErrorMessage = "CNPJ requerido.")]
         [Display(Name = "CNPJ")]
-        public string? CNPJ { get; set; }
+        public required string CNPJ { get; set; }
     }
 }
