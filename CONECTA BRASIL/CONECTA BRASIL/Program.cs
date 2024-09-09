@@ -30,3 +30,7 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<CONECTA_BRASILContext>(options =>
+    options.UseSqlServer(connectionString));
