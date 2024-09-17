@@ -1,24 +1,36 @@
+using CONECTA_BRASIL.Data;
 using CONECTA_BRASIL.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using CONECTA_BRASIL.ViewModels;
 
 namespace CONECTA_BRASIL.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly CONECTA_BRASILContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(CONECTA_BRASILContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            HomeViewModel model = new HomeViewModel();
+            model.Categorias = _context.Categorias;
+            model.Publicacoes = _context.Publicacoes;
+            // Aqui vou carregar os dados que vão para a página inicial
+
+            return View(model);
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult Login()
         {
             return View();
         }

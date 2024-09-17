@@ -43,26 +43,36 @@ namespace CONECTA_BRASIL.Controllers
             return View(pessoa);
         }
 
-        // GET: Pessoas/Create
-        public IActionResult Create()
+        // GET: Pessoas/Register
+        [HttpGet]
+        public IActionResult Register()
         {
             return View();
         }
 
-        // POST: Pessoas/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Pessoas/Register
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("BirthDate,Interesse,Id,Name,Email,Telefone,Senha")] Pessoa pessoa)
+        [ValidateAntiForgeryToken]  // Protege contra ataques CSRF
+        public async Task<IActionResult> Register(Pessoa pessoa)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(pessoa);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Pessoa.Add(pessoa);
+                    await _context.SaveChangesAsync();  // Asynchronous save
+                    return RedirectToAction("Login", "Usuarios");
+                }
             }
-            return View(pessoa);
+            catch (Exception ex)
+            {
+                // Log o erro completo para análise
+                Console.WriteLine(ex.ToString());
+                ViewBag.ErrorMessage = ex.Message;
+            }
+
+            // Se não for válido ou em caso de erro, retorne a view com os dados do formulário
+            return RedirectToAction("Login", "Usuarios");
         }
 
         // GET: Pessoas/Edit/5

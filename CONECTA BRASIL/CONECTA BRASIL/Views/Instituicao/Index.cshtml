@@ -13,12 +13,6 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Atuacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CNPJ)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
@@ -26,6 +20,12 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Telefone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Atuacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CNPJ)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Senha)
@@ -37,12 +37,6 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Atuacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CNPJ)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
@@ -50,6 +44,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Atuacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CNPJ)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Senha)

@@ -1,0 +1,40 @@
+﻿@model CONECTA_BRASIL.Models.PagInicial
+
+@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="container">
+    @if (Model.Publicacoes != null && Model.Publicacoes.Any())
+    {
+        <ul class="list-group">
+            @foreach (var publicacao in Model.Publicacoes)
+            {
+                <li class="list-group-item">
+                    <h5>@publicacao.Titulo</h5>
+                    <p>@publicacao.Conteudo</p>
+
+                    @if (publicacao.PublicacaoCategorias != null && publicacao.PublicacaoCategorias.Any())
+                    {
+                        <ul>
+                            @foreach (var publicacaoCategoria in publicacao.PublicacaoCategorias)
+                            {
+                                <li>@publicacaoCategoria.Categoria.Tipo</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>Sem categorias associadas.</p>
+                    }
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Nenhuma publicação encontrada.</p>
+    }
+</div>

@@ -1,18 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 using static CONECTA_BRASIL.Models.Pessoa;
 
 namespace CONECTA_BRASIL.Models
 {
     public class Publicacao
     {
-        public enum Categorias
-        {
-            Noticias,
-            Esportes,
-            Eventos,
-            Avisos
-        }
-
         [Key]
         public int Id { get; set; }
 
@@ -20,7 +13,17 @@ namespace CONECTA_BRASIL.Models
         [Display(Name = "Titulo")]
         public string? Titulo { get; set; }
 
+<<<<<<< Updated upstream
         [Display(Name = "Categoria")]
         public Categorias Categoria { get; set; }
+=======
+        [Display(Name = "Conteudo")]
+        public required string Conteudo { get; set; }
+
+        public int CriadorId { get; set; }
+        public Usuario? Criador { get; set; }
+
+        public List<PublicacaoCategoria>? PublicacaoCategorias { get; set; }
+>>>>>>> Stashed changes
     }
 }

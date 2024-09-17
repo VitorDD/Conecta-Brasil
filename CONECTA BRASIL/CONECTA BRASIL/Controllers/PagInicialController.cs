@@ -10,22 +10,33 @@ using CONECTA_BRASIL.Models;
 
 namespace CONECTA_BRASIL.Controllers
 {
-    public class InstituiçãoController : Controller
+    public class PagInicialController : Controller
     {
         private readonly CONECTA_BRASILContext _context;
 
-        public InstituiçãoController(CONECTA_BRASILContext context)
+        public PagInicialController(CONECTA_BRASILContext context)
         {
             _context = context;
         }
 
-        // GET: Instituição
+        // GET: PagInicials
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Instituição.ToListAsync());
+            var publicacoes = await _context.Publicacoes
+                .Include(p => p.PublicacaoCategorias)
+                    .ThenInclude(pc => pc.Categoria)
+                .ToListAsync();
+
+            var model = new PagInicial
+            {
+                Publicacoes = publicacoes
+            };
+
+            return View(model);
         }
 
-        // GET: Instituição/Details/5
+        // GET: PagInicials/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +44,39 @@ namespace CONECTA_BRASIL.Controllers
                 return NotFound();
             }
 
-            var instituição = await _context.Instituição
+            var pagInicial = await _context.PagInicial
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (instituição == null)
+            if (pagInicial == null)
             {
                 return NotFound();
             }
 
-            return View(instituição);
+            return View(pagInicial);
         }
 
-        // GET: Instituição/Create
+        // GET: PagInicials/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Instituição/Create
+        // POST: PagInicials/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Atuacao,CNPJ,Id,Name,Email,Telefone,Senha")] Instituicao instituição)
+        public async Task<IActionResult> Create([Bind("Id")] PagInicial pagInicial)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(instituição);
+                _context.Add(pagInicial);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(instituição);
+            return View(pagInicial);
         }
 
-        // GET: Instituição/Edit/5
+        // GET: PagInicials/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +84,22 @@ namespace CONECTA_BRASIL.Controllers
                 return NotFound();
             }
 
-            var instituição = await _context.Instituição.FindAsync(id);
-            if (instituição == null)
+            var pagInicial = await _context.PagInicial.FindAsync(id);
+            if (pagInicial == null)
             {
                 return NotFound();
             }
-            return View(instituição);
+            return View(pagInicial);
         }
 
-        // POST: Instituição/Edit/5
+        // POST: PagInicials/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Atuacao,CNPJ,Id,Name,Email,Telefone,Senha")] Instituicao instituição)
+        public async Task<IActionResult> Edit(int id, [Bind("Id")] PagInicial pagInicial)
         {
-            if (id != instituição.Id)
+            if (id != pagInicial.Id)
             {
                 return NotFound();
             }
@@ -97,12 +108,12 @@ namespace CONECTA_BRASIL.Controllers
             {
                 try
                 {
-                    _context.Update(instituição);
+                    _context.Update(pagInicial);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!InstituiçãoExists(instituição.Id))
+                    if (!PagInicialExists(pagInicial.Id))
                     {
                         return NotFound();
                     }
@@ -113,10 +124,10 @@ namespace CONECTA_BRASIL.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(instituição);
+            return View(pagInicial);
         }
 
-        // GET: Instituição/Delete/5
+        // GET: PagInicials/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,34 +135,34 @@ namespace CONECTA_BRASIL.Controllers
                 return NotFound();
             }
 
-            var instituição = await _context.Instituição
+            var pagInicial = await _context.PagInicial
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (instituição == null)
+            if (pagInicial == null)
             {
                 return NotFound();
             }
 
-            return View(instituição);
+            return View(pagInicial);
         }
 
-        // POST: Instituição/Delete/5
+        // POST: PagInicials/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var instituição = await _context.Instituição.FindAsync(id);
-            if (instituição != null)
+            var pagInicial = await _context.PagInicial.FindAsync(id);
+            if (pagInicial != null)
             {
-                _context.Instituição.Remove(instituição);
+                _context.PagInicial.Remove(pagInicial);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool InstituiçãoExists(int id)
+        private bool PagInicialExists(int id)
         {
-            return _context.Instituição.Any(e => e.Id == id);
+            return _context.PagInicial.Any(e => e.Id == id);
         }
     }
 }

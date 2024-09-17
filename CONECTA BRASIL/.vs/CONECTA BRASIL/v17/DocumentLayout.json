@@ -1,14 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\CONECTA BRASIL\\",
+  "WorkspaceRootPath": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta brasil\\conecta brasil\\models\\pessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\models\\pessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta brasil\\conecta brasil\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\conecta brasil.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\conecta brasil.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\views\\pessoas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\views\\pessoas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\controllers\\paginicialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\controllers\\paginicialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\controllers\\publicacaoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\controllers\\publicacaoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\views\\paginicial\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\views\\paginicial\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\models\\paginicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\models\\paginicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +54,150 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Pessoa.cs",
-              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\Models\\Pessoa.cs",
-              "RelativeDocumentMoniker": "CONECTA BRASIL\\Models\\Pessoa.cs",
-              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\Models\\Pessoa.cs",
-              "RelativeToolTip": "CONECTA BRASIL\\Models\\Pessoa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T23:29:18.224Z",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "CONECTA BRASIL\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-16T23:57:47.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "CONECTA BRASIL\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\Models\\Usuario.cs",
-              "RelativeToolTip": "CONECTA BRASIL\\Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "CONECTA BRASIL\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-16T23:57:22.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "CONECTA BRASIL\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T23:25:25.569Z"
+              "WhenOpened": "2024-09-16T23:55:36.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeViewModel.cs",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\ViewModels\\HomeViewModel.cs",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\ViewModels\\HomeViewModel.cs",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\ViewModels\\HomeViewModel.cs",
+              "RelativeToolTip": "CONECTA BRASIL\\ViewModels\\HomeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T23:53:26.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CONECTA BRASIL",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\CONECTA BRASIL.csproj",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj",
+              "RelativeToolTip": "CONECTA BRASIL\\CONECTA BRASIL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-16T23:52:40.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Views\\Pessoas\\Index.cshtml",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\Views\\Pessoas\\Index.cshtml",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Views\\Pessoas\\Index.cshtml",
+              "RelativeToolTip": "CONECTA BRASIL\\Views\\Pessoas\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-16T23:52:06.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Program.cs",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\Program.cs",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Program.cs",
+              "RelativeToolTip": "CONECTA BRASIL\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T23:43:54.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PublicacaosController.cs",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Controllers\\PublicacaosController.cs",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\Controllers\\PublicacaosController.cs",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Controllers\\PublicacaosController.cs",
+              "RelativeToolTip": "CONECTA BRASIL\\Controllers\\PublicacaosController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T23:39:17.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Views\\PagInicial\\Index.cshtml",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\Views\\PagInicial\\Index.cshtml",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Views\\PagInicial\\Index.cshtml",
+              "RelativeToolTip": "CONECTA BRASIL\\Views\\PagInicial\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-16T23:35:11.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PagInicialController.cs",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Controllers\\PagInicialController.cs",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\Controllers\\PagInicialController.cs",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Controllers\\PagInicialController.cs",
+              "RelativeToolTip": "CONECTA BRASIL\\Controllers\\PagInicialController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T23:34:42.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PagInicial.cs",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Models\\PagInicial.cs",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\Models\\PagInicial.cs",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Models\\PagInicial.cs",
+              "RelativeToolTip": "CONECTA BRASIL\\Models\\PagInicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T22:47:45.904Z",
+              "EditorCaption": ""
             }
           ]
         }

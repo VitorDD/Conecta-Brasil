@@ -10,11 +10,11 @@ using CONECTA_BRASIL.Models;
 
 namespace CONECTA_BRASIL.Controllers
 {
-    public class PublicacaosController : Controller
+    public class PublicacaoController : Controller
     {
         private readonly CONECTA_BRASILContext _context;
 
-        public PublicacaosController(CONECTA_BRASILContext context)
+        public PublicacaoController(CONECTA_BRASILContext context)
         {
             _context = context;
         }
@@ -22,7 +22,20 @@ namespace CONECTA_BRASIL.Controllers
         // GET: Publicacaos
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Publicacao.ToListAsync());
+            try
+            {
+                var publicacoes = await _context.Publicacoes
+                    .Include(p => p.Criador)
+                    .ToListAsync();
+
+                return View(publicacoes);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception and handle it as needed
+                // Example: ViewBag.ErrorMessage = "Erro ao carregar publicações.";
+                return View("Error"); // Redireciona para uma view de erro genérico
+            }
         }
 
         // GET: Publicacaos/Details/5
@@ -33,7 +46,7 @@ namespace CONECTA_BRASIL.Controllers
                 return NotFound();
             }
 
-            var publicacao = await _context.Publicacao
+            var publicacao = await _context.Publicacoes
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (publicacao == null)
             {
@@ -43,18 +56,18 @@ namespace CONECTA_BRASIL.Controllers
             return View(publicacao);
         }
 
-        // GET: Publicacaos/Create
+        // GET: Publicacao/Create
+        [HttpGet]
         public IActionResult Create()
         {
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Tipo");
             return View();
         }
 
-        // POST: Publicacaos/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Publicacao/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Titulo,Categoria")] Publicacao publicacao)
+        public async Task<IActionResult> Create([Bind("Titulo,Conteudo,PublicacaoCategorias")] Publicacao publicacao)
         {
             if (ModelState.IsValid)
             {
@@ -62,6 +75,7 @@ namespace CONECTA_BRASIL.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Tipo", publicacao.PublicacaoCategorias?.FirstOrDefault()?.CategoriaId);
             return View(publicacao);
         }
 
@@ -73,7 +87,7 @@ namespace CONECTA_BRASIL.Controllers
                 return NotFound();
             }
 
-            var publicacao = await _context.Publicacao.FindAsync(id);
+            var publicacao = await _context.Publicacoes.FindAsync(id);
             if (publicacao == null)
             {
                 return NotFound();
@@ -124,7 +138,7 @@ namespace CONECTA_BRASIL.Controllers
                 return NotFound();
             }
 
-            var publicacao = await _context.Publicacao
+            var publicacao = await _context.Publicacoes
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (publicacao == null)
             {
@@ -139,10 +153,10 @@ namespace CONECTA_BRASIL.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var publicacao = await _context.Publicacao.FindAsync(id);
+            var publicacao = await _context.Publicacoes.FindAsync(id);
             if (publicacao != null)
             {
-                _context.Publicacao.Remove(publicacao);
+                _context.Publicacoes.Remove(publicacao);
             }
 
             await _context.SaveChangesAsync();
@@ -151,7 +165,7 @@ namespace CONECTA_BRASIL.Controllers
 
         private bool PublicacaoExists(int id)
         {
-            return _context.Publicacao.Any(e => e.Id == id);
+            return _context.Publicacoes.Any(e => e.Id == id);
         }
     }
 }

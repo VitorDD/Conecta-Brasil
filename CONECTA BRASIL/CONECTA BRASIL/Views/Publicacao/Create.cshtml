@@ -1,0 +1,32 @@
+﻿@model CONECTA_BRASIL.Models.Publicacao
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Publicacao</h4>
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Titulo">Título</label>
+        <input asp-for="Titulo" class="form-control" />
+        <span asp-validation-for="Titulo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Conteudo">Conteúdo</label>
+        <textarea asp-for="Conteudo" class="form-control"></textarea>
+        <span asp-validation-for="Conteudo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="CategoriaId">Categoria</label>
+        <select asp-for="PublicacaoCategorias" asp-items="ViewBag.CategoriaId" class="form-control">
+            <option value="">Selecione uma categoria</option>
+        </select>
+        <span asp-validation-for="PublicacaoCategorias" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Criar</button>
+</form>

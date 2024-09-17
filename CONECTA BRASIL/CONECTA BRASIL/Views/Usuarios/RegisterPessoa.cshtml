@@ -1,0 +1,38 @@
+﻿@model CONECTA_BRASIL.Models.Pessoa
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+
+<h4>Pessoa</h4>
+<hr />
+<form asp-action="Register" method="post">
+    <div class="form-group">
+        <label>Nome</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Telefone</label>
+        <input asp-for="Telefone" class="form-control" />
+        <span asp-validation-for="Telefone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Senha</label>
+        <input asp-for="Senha" class="form-control" type="password" />
+        <span asp-validation-for="Senha" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Data de Nascimento</label>
+        <input asp-for="BirthDate" class="form-control" type="date" />
+        <span asp-validation-for="BirthDate" class="text-danger"></span>
+    </div>
+    <a asp-action="Login" class="btn btn-secondary">Registrar</a>
+</form>
