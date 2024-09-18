@@ -12,12 +12,10 @@ namespace CONECTA_BRASIL.Data
         public CONECTA_BRASILContext()
         {
         }
-
         public CONECTA_BRASILContext (DbContextOptions<CONECTA_BRASILContext> options)
             : base(options)
         {
         }
-
         public DbSet<CONECTA_BRASIL.Models.Usuario> Usuario { get; set; } = default!;
         public DbSet<CONECTA_BRASIL.Models.Pessoa> Pessoa { get; set; } = default!;
         public DbSet<CONECTA_BRASIL.Models.Instituicao> Instituicao { get; set; } = default!;
@@ -39,6 +37,5 @@ namespace CONECTA_BRASIL.Data
                 .WithMany(c => c.PublicacaoCategorias)
                 .HasForeignKey(pc => pc.CategoriaId);
         }
-        public DbSet<CONECTA_BRASIL.Models.PagInicial> PagInicial { get; set; } = default!;
     }
 }

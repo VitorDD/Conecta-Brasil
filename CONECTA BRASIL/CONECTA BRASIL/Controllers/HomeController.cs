@@ -3,6 +3,7 @@ using CONECTA_BRASIL.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using CONECTA_BRASIL.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace CONECTA_BRASIL.Controllers
 {
@@ -15,14 +16,23 @@ namespace CONECTA_BRASIL.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? categoriaId)
         {
-            HomeViewModel model = new HomeViewModel();
-            model.Categorias = _context.Categorias;
-            model.Publicacoes = _context.Publicacoes;
-            // Aqui vou carregar os dados que vão para a página inicial
+            var usuarioNome = User.Identity.IsAuthenticated ? User.Identity.Name : "Visitante";
 
-            return View(model);
+            var viewModel = new HomeViewModel
+            {
+                Categorias = _context.Categorias.ToList(),
+                Publicacoes = _context.Publicacoes
+                                      .Include(p => p.PublicacaoCategorias)
+                                      .ThenInclude(pc => pc.Categoria)
+                                      .Where(p => !categoriaId.HasValue || p.PublicacaoCategorias.Any(pc => pc.CategoriaId == categoriaId))
+                                      .ToList(),
+                CategoriaSelecionadaId = categoriaId ?? 0,
+                UsuarioNome = usuarioNome
+            };
+
+            return View(viewModel);
         }
 
         public IActionResult Privacy()

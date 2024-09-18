@@ -1,9 +1,64 @@
-﻿@model HomeViewModel
-@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@using Microsoft.AspNetCore.Authentication.Cookies
+@using System.Security.Claims
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@model HomeViewModel
+
+<div class="container">
+    <div class="row">
+        <!-- Exibir Nome do Usuário -->
+        <div class="col-md-12">
+            <p>Bem-vindo, @User.Identity.Name!</p>
+            <a href="@Url.Action("Create", "Publicacao")" class="btn btn-primary">Criar Publicação</a>
+        </div>
+
+        <!-- Sidebar de Categorias -->
+        <div class="col-md-3">
+            <h3>Categorias</h3>
+            <ul class="list-group">
+                @foreach (var categoria in Model.Categorias)
+                {
+                    <li class="list-group-item @(Model.CategoriaSelecionadaId == categoria.Id ? "active" : "")">
+                        <a href="@Url.Action("Index", new { categoriaId = categoria.Id })">@categoria.Tipo</a>
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <!-- Publicações no Centro -->
+        <div class="col-md-9">
+            <h3>Publicações</h3>
+            @if (Model.Publicacoes.Any())
+            {
+                <div class="list-group">
+                    @foreach (var publicacao in Model.Publicacoes)
+                    {
+                        <div class="list-group-item">
+                            <h4>@publicacao.Titulo</h4>
+                            <p>@publicacao.Conteudo</p>
+
+                            <!-- Exibir Categorias relacionadas -->
+                            <p>
+                                <strong>Categorias:</strong>
+                                @if (publicacao.PublicacaoCategorias != null && publicacao.PublicacaoCategorias.Any())
+                                {
+                                    @foreach (var pubCat in publicacao.PublicacaoCategorias)
+                                    {
+                                        <span>@pubCat.Categoria.Tipo </span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>Nenhuma categoria relacionada.</span>
+                                }
+                            </p>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <p>Nenhuma publicação disponível.</p>
+            }
+        </div>
+    </div>
 </div>

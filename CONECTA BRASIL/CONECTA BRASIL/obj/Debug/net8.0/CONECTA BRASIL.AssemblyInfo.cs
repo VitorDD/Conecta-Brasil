@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CONECTA BRASIL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da14f60e783d28ae611faa2c8a15032c1fa2a38b")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa12a75033b67201615b2039119f96d7d6cda55c")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7e08e777bb207a4e77b66b9f0ebb909bd314adf")]
 [assembly: System.Reflection.AssemblyProductAttribute("CONECTA BRASIL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CONECTA BRASIL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

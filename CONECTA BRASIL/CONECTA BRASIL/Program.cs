@@ -1,11 +1,26 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using CONECTA_BRASIL.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<CONECTA_BRASILContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CONECTA_BRASILContext") ?? throw new InvalidOperationException("Connection string 'CONECTA_BRASILContext' not found.")));
+
+builder.Services.AddDbContext<CONECTA_BRASILContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Usuarios/Login";
+        options.LogoutPath = "/Usuarios/Logout";
+        options.AccessDeniedPath = "/Usuarios/AccessDenied";
+    });
+
+builder.Services.AddAuthorization();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -37,8 +52,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-<<<<<<< Updated upstream
-=======
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<CONECTA_BRASILContext>(options =>
@@ -53,5 +66,13 @@ app.UseEndpoints(endpoints =>
         pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+
 app.Run();
->>>>>>> Stashed changes

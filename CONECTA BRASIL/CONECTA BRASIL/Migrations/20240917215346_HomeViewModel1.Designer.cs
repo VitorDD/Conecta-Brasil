@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CONECTA_BRASIL.Migrations
 {
     [DbContext(typeof(CONECTA_BRASILContext))]
-    [Migration("20240916224626_PagInicial")]
-    partial class PagInicial
+    [Migration("20240917215346_HomeViewModel1")]
+    partial class HomeViewModel1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,27 +37,9 @@ namespace CONECTA_BRASIL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Categorias");
-                });
-
-            modelBuilder.Entity("CONECTA_BRASIL.Models.PagInicial", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PagInicial");
                 });
 
             modelBuilder.Entity("CONECTA_BRASIL.Models.Publicacao", b =>
@@ -75,9 +57,6 @@ namespace CONECTA_BRASIL.Migrations
                     b.Property<int>("CriadorId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PagInicialId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Titulo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -85,8 +64,6 @@ namespace CONECTA_BRASIL.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CriadorId");
-
-                    b.HasIndex("PagInicialId");
 
                     b.ToTable("Publicacoes");
                 });
@@ -177,17 +154,6 @@ namespace CONECTA_BRASIL.Migrations
                     b.HasDiscriminator().HasValue("Pessoa");
                 });
 
-            modelBuilder.Entity("CONECTA_BRASIL.Models.Categoria", b =>
-                {
-                    b.HasOne("CONECTA_BRASIL.Models.Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Usuario");
-                });
-
             modelBuilder.Entity("CONECTA_BRASIL.Models.Publicacao", b =>
                 {
                     b.HasOne("CONECTA_BRASIL.Models.Usuario", "Criador")
@@ -195,10 +161,6 @@ namespace CONECTA_BRASIL.Migrations
                         .HasForeignKey("CriadorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("CONECTA_BRASIL.Models.PagInicial", null)
-                        .WithMany("Publicacoes")
-                        .HasForeignKey("PagInicialId");
 
                     b.Navigation("Criador");
                 });
@@ -225,11 +187,6 @@ namespace CONECTA_BRASIL.Migrations
             modelBuilder.Entity("CONECTA_BRASIL.Models.Categoria", b =>
                 {
                     b.Navigation("PublicacaoCategorias");
-                });
-
-            modelBuilder.Entity("CONECTA_BRASIL.Models.PagInicial", b =>
-                {
-                    b.Navigation("Publicacoes");
                 });
 
             modelBuilder.Entity("CONECTA_BRASIL.Models.Publicacao", b =>

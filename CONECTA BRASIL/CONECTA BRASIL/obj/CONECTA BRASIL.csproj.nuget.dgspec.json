@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj": {}
+    "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj": {}
   },
   "projects": {
-    "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj": {
+    "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj",
+        "projectUniqueName": "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj",
         "projectName": "CONECTA BRASIL",
-        "projectPath": "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj",
+        "projectPath": "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj",
         "packagesPath": "C:\\Users\\Leonardo P Z\\.nuget\\packages\\",
-        "outputPath": "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\obj\\",
+        "outputPath": "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Leonardo P Z\\AppData\\Roaming\\NuGet\\NuGet.Config",

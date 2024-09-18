@@ -1,12 +1,8 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "zawRVhOU9Kg=",
-=======
   "dgSpecHash": "P74lwkrmevY=",
->>>>>>> Stashed changes
   "success": true,
-  "projectFilePath": "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj",
+  "projectFilePath": "C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\CONECTA BRASIL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Leonardo P Z\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Leonardo P Z\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -168,5 +164,12 @@
     "C:\\Users\\Leonardo P Z\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Leonardo P Z\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Backup\\Faculdade\\Computação aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

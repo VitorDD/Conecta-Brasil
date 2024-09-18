@@ -8,25 +8,30 @@
 
 <h4>Publicacao</h4>
 <form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+
     <div class="form-group">
-        <label for="Titulo">Título</label>
+        <label asp-for="Titulo" class="control-label"></label>
         <input asp-for="Titulo" class="form-control" />
         <span asp-validation-for="Titulo" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label for="Conteudo">Conteúdo</label>
+        <label asp-for="Conteudo" class="control-label"></label>
         <textarea asp-for="Conteudo" class="form-control"></textarea>
         <span asp-validation-for="Conteudo" class="text-danger"></span>
     </div>
 
     <div class="form-group">
-        <label for="CategoriaId">Categoria</label>
-        <select asp-for="PublicacaoCategorias" asp-items="ViewBag.CategoriaId" class="form-control">
+        <label asp-for="PublicacaoCategorias[0].CategoriaId" class="control-label">Categoria</label>
+        <select asp-for="PublicacaoCategorias[0].CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId">
             <option value="">Selecione uma categoria</option>
         </select>
-        <span asp-validation-for="PublicacaoCategorias" class="text-danger"></span>
+        <span asp-validation-for="PublicacaoCategorias[0].CategoriaId" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Criar</button>
 </form>
+
+<a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Voltar</a>
+

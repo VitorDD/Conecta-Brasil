@@ -6,5 +6,7 @@ namespace CONECTA_BRASIL.ViewModels
     {
         public IEnumerable<Categoria> Categorias { get; set; }
         public IEnumerable<Publicacao> Publicacoes { get; set; }
+        public int CategoriaSelecionadaId { get; set; }
+        public string UsuarioNome { get; set; }
     }
 }

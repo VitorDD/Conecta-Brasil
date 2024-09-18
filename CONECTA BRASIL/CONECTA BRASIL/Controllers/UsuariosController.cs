@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CONECTA_BRASIL.Data;
 using CONECTA_BRASIL.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
+using System.Security.Claims;
 
 namespace CONECTA_BRASIL.Controllers
 {
@@ -18,7 +21,7 @@ namespace CONECTA_BRASIL.Controllers
 
         public UsuariosController(CONECTA_BRASILContext context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         // Registro para Pessoa
@@ -58,20 +61,27 @@ namespace CONECTA_BRASIL.Controllers
         [HttpPost]
         public async Task<IActionResult> RegisterInstituicao(Instituicao model)
         {
+            if (model == null)
+            {
+                throw new ArgumentNullException(nameof(model));
+            }
+
             try
             {
                 if (ModelState.IsValid)
                 {
-                    _context.Instituicao.Add(instituicao);
+                    _context.Instituicao.Add(model);
                     await _context.SaveChangesAsync();
                     return RedirectToAction("Login", "Usuarios");
                 }
             }
             catch (Exception ex)
             {
+                // Use logging framework in real-world applications
                 Console.WriteLine(ex.ToString());
                 ViewBag.ErrorMessage = ex.Message;
             }
+
             return View(model);
         }
 
@@ -90,28 +100,28 @@ namespace CONECTA_BRASIL.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(string email, string senha)
+        public async Task<IActionResult> Login(string email, string senha)
         {
-            // Busca o usuário pelo email e valida a senha
             Usuario usuario = BuscarUsuarioPorEmail(email);
             if (usuario != null && usuario.Senha == senha)
             {
-                if (usuario is Pessoa)
+                var claims = new List<Claim>
                 {
-                    // Redireciona para a dashboard de Pessoa
-                    return RedirectToAction("DashboardPessoa", "Pessoa");
-                }
-                else if (usuario is Instituicao)
-                {
-                    // Redireciona para a dashboard de Instituicao
-                    return RedirectToAction("DashboardInstituicao", "Instituicao");
-                }
+                    new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()), // Adiciona o ID do usuário
+                    new Claim(ClaimTypes.Name, usuario.Name),
+                    new Claim(ClaimTypes.Role, usuario is Pessoa ? "Pessoa" : "Instituicao")
+                };
+
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var principal = new ClaimsPrincipal(identity);
+
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+                return RedirectToAction("Index", "Home");
             }
-            // Caso falhe, retorna erro ou view de login novamente
             ModelState.AddModelError("", "Email ou senha inválidos");
             return View();
         }
-
 
         // GET: Usuarios
         public async Task<IActionResult> Index()

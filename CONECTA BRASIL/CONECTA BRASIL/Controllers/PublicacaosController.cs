@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CONECTA_BRASIL.Data;
 using CONECTA_BRASIL.Models;
+using System.Security.Claims;
 
 namespace CONECTA_BRASIL.Controllers
 {
@@ -60,23 +61,45 @@ namespace CONECTA_BRASIL.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Tipo");
+            // Passa a lista de categorias para a View
+            ViewBag.CategoriaId = new SelectList(_context.Categorias, "Id", "Tipo");
             return View();
         }
 
-        // POST: Publicacao/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Titulo,Conteudo,PublicacaoCategorias")] Publicacao publicacao)
+        public async Task<IActionResult> Create(Publicacao publicacao, int CategoriaId)
         {
-            if (ModelState.IsValid)
+            // Obtém o ID do usuário conectado
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (userId == null)
             {
-                _context.Add(publicacao);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Unauthorized();
             }
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Tipo", publicacao.PublicacaoCategorias?.FirstOrDefault()?.CategoriaId);
-            return View(publicacao);
+
+            // Inicializa a lista de PublicacaoCategorias
+            if (CategoriaId > 0)
+            {
+                publicacao.PublicacaoCategorias = new List<PublicacaoCategoria>
+                {
+                    new PublicacaoCategoria
+                    {
+                        CategoriaId = CategoriaId,
+                        Publicacao = publicacao,
+                        Categoria = await _context.Categorias.FindAsync(CategoriaId)
+                    }
+                };
+            }
+
+            // Associa o ID do usuário à publicação
+            publicacao.CriadorId = int.Parse(userId); // Assumindo que o ID é um inteiro
+            publicacao.Criador = await _context.Usuario.FindAsync(publicacao.CriadorId);
+
+            _context.Publicacoes.Add(publicacao);
+            await _context.SaveChangesAsync();
+            //return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Home");
         }
 
         // GET: Publicacaos/Edit/5

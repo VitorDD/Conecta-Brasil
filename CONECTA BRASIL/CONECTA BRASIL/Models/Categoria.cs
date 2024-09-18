@@ -9,10 +9,6 @@ namespace CONECTA_BRASIL.Models
         [Key]
         public int Id { get; set; }
         public required string Tipo { get; set; }
-        public int UsuarioId { get; set; }
-
-        [ForeignKey("UsuarioId")]
-        public required Usuario Usuario { get; set; }
 
         public List<PublicacaoCategoria>? PublicacaoCategorias { get; set; }
     }

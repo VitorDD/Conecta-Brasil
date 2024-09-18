@@ -8,36 +8,38 @@
 
 <h4>Instituição</h4>
 <hr />
-<form asp-action="Register" method="post">
+<form asp-action="RegisterInstituicao" method="post">
     <div class="form-group">
-        <label>Nome</label>
+        <label asp-for="Name" class="control-label">Nome</label>
         <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label>Email</label>
+        <label asp-for="Email" class="control-label">Email</label>
         <input asp-for="Email" class="form-control" />
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label>Telefone</label>
+        <label asp-for="Telefone" class="control-label">Telefone</label>
         <input asp-for="Telefone" class="form-control" />
         <span asp-validation-for="Telefone" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label>Senha</label>
+        <label asp-for="Senha" class="control-label">Senha</label>
         <input asp-for="Senha" class="form-control" type="password" />
         <span asp-validation-for="Senha" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label>Área de Atuação</label>
+        <label asp-for="Atuacao" class="control-label">Área de Atuação</label>
         <input asp-for="Atuacao" class="form-control" />
         <span asp-validation-for="Atuacao" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label>CNPJ</label>
+        <label asp-for="CNPJ" class="control-label">CNPJ</label>
         <input asp-for="CNPJ" class="form-control" />
         <span asp-validation-for="CNPJ" class="text-danger"></span>
     </div>
-    <a asp-action="Login" class="btn btn-secondary">Registrar</a>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </div>
 </form>
