@@ -25,5 +25,15 @@ namespace CONECTA_BRASIL.Models
 
         [Display(Name = "Conteudo")]
         public required string Conteudo { get; set; }
+<<<<<<< Updated upstream
+=======
+
+        public int CriadorId { get; set; }
+        public Usuario? Criador { get; set; }
+
+        public required List<PublicacaoCategoria> PublicacaoCategorias { get; set; } = new List<PublicacaoCategoria>();
+
+        public DateTime DataCriacao { get; set; } = DateTime.Now;
+>>>>>>> Stashed changes
     }
 }

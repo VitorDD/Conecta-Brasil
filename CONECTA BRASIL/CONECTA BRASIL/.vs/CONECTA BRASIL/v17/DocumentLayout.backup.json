@@ -1,6 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\",
+<<<<<<< Updated upstream
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Views\\Pessoas\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -11,10 +12,14 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
+=======
+  "Documents": [],
+>>>>>>> Stashed changes
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
+<<<<<<< Updated upstream
       "DocumentGroups": [
         {
           "DockedWidth": 200,
@@ -49,6 +54,9 @@
           ]
         }
       ]
+=======
+      "DocumentGroups": []
+>>>>>>> Stashed changes
     }
   ]
 }

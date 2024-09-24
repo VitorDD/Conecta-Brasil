@@ -54,10 +54,13 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdGl0dWljYW9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< Updated upstream
 [C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Pessoas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVzc29hc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+=======
+>>>>>>> Stashed changes
 [C:/Backup/Faculdade/Computação aplicada regionalidade/Conecta-Brasil/CONECTA BRASIL/CONECTA BRASIL/Views/Pessoas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVzc29hc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

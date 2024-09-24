@@ -1,0 +1,145 @@
+﻿@model CONECTA_BRASIL.Models.Usuario
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = null; /* Remove o layout padrão */
+}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - CONECTA_BRASIL</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /* Imagem de fundo */
+            background-image: url('https://img.freepik.com/free-photo/planet-earth-background_23-2150564685.jpg?w=1380&t=st=1726790441~exp=1726791041~hmac=6160087d931742ae9c58e753675e6989a61e191a2568e013a592e42a5d75f888');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Centralizar o login no meio da página */
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: #fff; /* Fundo branco sem transparência */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button, a {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+            height: 50px;
+            box-sizing: border-box;
+        }
+
+            button:hover, a:hover {
+                background-color: #0056b3;
+            }
+
+        .btn-primary {
+            background-color: #007BFF;
+            box-sizing: border-box;
+        }
+
+            .btn-primary:hover, .btn-secondary:hover {
+                background-color: #5a6268;
+            }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            box-sizing: border-box;
+        }
+
+            .btn-secondary:hover {
+                background-color: #5a6268;
+            }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+            .footer a {
+                color: #007BFF;
+                text-decoration: none;
+            }
+
+                .footer a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+
+    <!-- Container principal que centraliza o login -->
+    <div class="container">
+        <div class="login-container">
+            <h2>@ViewData["Title"]</h2>
+            <form asp-action="Login" method="post">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" class="form-control" name="senha" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                <a asp-action="RegisterPessoa" class="btn btn-secondary">Registrar Pessoa</a>
+                <a asp-action="RegisterInstituicao" class="btn btn-secondary">Registrar Instituição</a>
+            </form>
+            <div class="footer">
+                <p>© 2024 - CONECTA_BRASIL</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

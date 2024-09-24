@@ -2,7 +2,406 @@
     ViewData["Title"] = "Home Page";
 }
 
+<<<<<<< Updated upstream
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+=======
+@model HomeViewModel
+
+@{
+    Layout = null; /* Remove o layout padrão */
+}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicações</title>
+    <!-- Adiciona o link do Font Awesome aqui -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Estilos da barra superior */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white; /* Muda a cor da barra para branco */
+            height: 60px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+        }
+
+        /* Container da barra */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 100%;
+        }
+
+        /* Container da logo e texto */
+        .logo-text-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Container da logo */
+        .logo-container {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Imagem da logo */
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%; /* Deixa a imagem redonda */
+            object-fit: cover; /* Garante que a imagem preencha o círculo */
+        }
+
+        /* Estilos para o texto "Conecta Brasil" */
+        .logo-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-left: 10px; /* Espaço entre a logo e o texto */
+        }
+
+        /* Estilos para as opções do usuário */
+        .user-options {
+            display: flex;
+            align-items: center;
+        }
+
+            .user-options .btn {
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 14px;
+                margin-right: 20px;
+                margin-top: 10px;
+                transition: background-color 0.3s ease;
+            }
+
+                .user-options .btn:hover {
+                    background-color: #0056b3;
+                }
+
+        .user-name {
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Menu lateral de Categorias - Branco com contorno cinza */
+        .sidebar {
+            width: 60px;
+            background-color: #ffffff; /* Cor branca */
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            border: 1px solid #ccc; /* Contorno cinza */
+            border-radius: 0 12px 12px 0;
+            transition: width 0.3s ease;
+            z-index: 1000; /* Certifica-se de que a barra lateral tenha um z-index inferior ao do cabeçalho */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #050A30; /* Cor de fundo azul petróleo */
+            color: #333;
+            height: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95); /* Fundo branco suave */
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+            overflow: auto;
+        }
+
+        .btn-primary {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-bottom: 20px;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                transform: translateY(-2px);
+            }
+
+        h3 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            color: #007bff;
+        }
+
+        /* Estilos para a Sidebar de Categorias */
+        .list-group {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .list-group-item {
+            padding: 12px 18px;
+            background-color: #f0f0f0;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
+            cursor: pointer;
+        }
+
+            .list-group-item:hover {
+                background-color: #007bff;
+                color: white;
+                transform: scale(1.05);
+            }
+
+            .list-group-item a {
+                text-decoration: none;
+                color: #333;
+                font-size: 18px;
+            }
+
+            .list-group-item.active {
+                background-color: #007bff;
+                color: white;
+            }
+
+        /* Estilos para as publicações */
+        .list-group-item-publicacao {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+            .list-group-item-publicacao:hover {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            }
+
+            .list-group-item-publicacao h4 {
+                margin-bottom: 10px;
+                font-size: 22px;
+                color: #007bff;
+            }
+
+            .list-group-item-publicacao p {
+                font-size: 16px;
+                color: #555;
+            }
+
+            .list-group-item-publicacao .categorias {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #007bff;
+            }
+
+        /* Flexbox Layout */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-md-3 {
+            flex: 1 1 30%;
+            padding: 15px;
+        }
+
+        .col-md-9 {
+            flex: 1 1 70%;
+            padding: 15px;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+            footer a {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+                footer a:hover {
+                    text-decoration: underline;
+                }
+
+        /* Menu lateral retrátil de Categorias */
+        .sidebar:hover {
+            width: 200px; /* Expande ao passar o mouse */
+        }
+
+        .sidebar h3 {
+            color: #007bff;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+            display: none; /* Esconde até expandir */
+        }
+
+        .sidebar:hover h3 {
+            display: block; /* Mostra ao expandir */
+        }
+
+        .list-group-item {
+            padding: 10px;
+            background-color: #ffffff; /* Fundo branco */
+            color: black;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            opacity: 0;
+            border: 1px solid #ccc; /* Contorno cinza */
+        }
+
+        .sidebar:hover .list-group-item {
+            opacity: 1; /* Mostra o texto ao expandir */
+        }
+
+        .list-group-item:hover {
+            background-color: #007BFF;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Centraliza e alinha o texto das categorias ao expandir */
+        .sidebar:hover .list-group-item {
+            text-align: left;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-text-container">
+                <div class="logo-container">
+                    <img src="https://i.pinimg.com/736x/d1/4f/d8/d14fd8e15653d019016704e138309dd6.jpg" alt="Logo" class="logo-img">
+                </div>
+                <span class="logo-text">Conecta Brasil</span> <!-- Texto ao lado da logo -->
+            </div>
+            <div class="user-options">
+                <a href="@Url.Action("Create", "Publicacao")" class="btn btn-primary">Criar Publicação</a>
+                <span class="user-name">@User.Identity.Name</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top: 80px;">
+        <!-- Ajustar o container para não sobrepor a barra fixa -->
+        <div class="row">
+            <!-- Sidebar de Categorias -->
+            <div class="sidebar">
+                <h3>Categorias</h3>
+                <ul class="list-group">
+                    @foreach (var categoria in Model.Categorias)
+                    {
+                        <li class="list-group-item @(Model.CategoriaSelecionadaId == categoria.Id ? "active" : "")">
+                            <a href="@Url.Action("Index", new { categoriaId = categoria.Id })" style="text-decoration: none; color: black;">
+                                @if (categoria.Tipo == "Clima")
+                                {
+                                    <i class="fas fa-cloud-sun"></i>
+                                }
+                                else if (categoria.Tipo == "Notícia")
+                                {
+                                    <i class="fas fa-newspaper"></i>
+                                }
+                                else if (categoria.Tipo == "Esporte")
+                                {
+                                    <i class="fas fa-futbol"></i>
+                                }
+                                else if (categoria.Tipo == "Evento")
+                                {
+                                    <i class="fas fa-calendar-alt"></i>
+                                }
+                                else if (categoria.Tipo == "Aviso")
+                                {
+                                    <i class="fas fa-bell"></i>
+                                }
+
+                                @categoria.Tipo
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <!-- Publicações no Centro -->
+            <div class="col-md-9">
+                <h3>Publicações</h3>
+                @if (Model.Publicacoes.Any())
+                {
+                    <div class="list-group">
+                        @foreach (var publicacao in Model.Publicacoes)
+                        {
+                            <div class="list-group-item-publicacao">
+                                <p>Criador: @publicacao.Criador?.Name</p>
+                                <h4>@publicacao.Titulo</h4>
+                                <p class="categorias">
+                                    Categoria:
+                                    @if (publicacao.PublicacaoCategorias != null && publicacao.PublicacaoCategorias.Any())
+                                    {
+                                        @foreach (var pubCat in publicacao.PublicacaoCategorias)
+                                        {
+                                            <span>@pubCat.Categoria.Tipo </span>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <span>Nenhuma categoria relacionada.</span>
+                                    }
+                                </p>
+                                <p>@publicacao.Conteudo</p>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p>Nenhuma publicação disponível.</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 - CONECTA_BRASIL · <a href="/Privacy">Privacy</a>
+    </footer>
+
+</body>
+</html>
+>>>>>>> Stashed changes
