@@ -62,7 +62,34 @@ namespace CONECTA_BRASIL.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+<<<<<<< Updated upstream
             return View(publicacao);
+=======
+
+            // Inicializa a lista de PublicacaoCategorias
+            if (CategoriaId > 0)
+            {
+                publicacao.PublicacaoCategorias = new List<PublicacaoCategoria>
+                {
+                    new PublicacaoCategoria
+                    {
+                        CategoriaId = CategoriaId,
+                        Publicacao = publicacao,
+                        Categoria = await _context.Categorias.FindAsync(CategoriaId)
+                    }
+                };
+            }
+
+            // Associa o ID do usuário à publicação
+            publicacao.CriadorId = int.Parse(userId); // Assumindo que o ID é um inteiro
+            publicacao.Criador = await _context.Usuario.FindAsync(publicacao.CriadorId);
+            publicacao.DataCriacao = DateTime.Now;
+
+            _context.Publicacoes.Add(publicacao);
+            await _context.SaveChangesAsync();
+            //return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Home");
+>>>>>>> Stashed changes
         }
 
         // GET: Publicacaos/Edit/5
@@ -116,7 +143,7 @@ namespace CONECTA_BRASIL.Controllers
             return View(publicacao);
         }
 
-        // GET: Publicacaos/Delete/5
+        // GET: Publicacoes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -126,6 +153,7 @@ namespace CONECTA_BRASIL.Controllers
 
             var publicacao = await _context.Publicacao
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (publicacao == null)
             {
                 return NotFound();
@@ -134,18 +162,27 @@ namespace CONECTA_BRASIL.Controllers
             return View(publicacao);
         }
 
-        // POST: Publicacaos/Delete/5
-        [HttpPost, ActionName("Delete")]
+        // POST: Home/Delete/5
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> Delete(int id)
         {
+<<<<<<< Updated upstream
             var publicacao = await _context.Publicacao.FindAsync(id);
             if (publicacao != null)
             {
                 _context.Publicacao.Remove(publicacao);
+=======
+            var publicacaoCategorias = _context.PublicacaoCategorias.Where(pc => pc.PublicacaoId == id);
+            _context.PublicacaoCategorias.RemoveRange(publicacaoCategorias);
+            var publicacao = await _context.Publicacoes.FindAsync(id);
+            if (publicacao != null)
+            {
+                _context.Publicacoes.Remove(publicacao);
+                await _context.SaveChangesAsync();
+>>>>>>> Stashed changes
             }
 
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 

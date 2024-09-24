@@ -3,12 +3,21 @@
   "WorkspaceRootPath": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\CONECTA BRASIL\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta brasil\\conecta brasil\\models\\pessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\models\\pessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta brasil\\conecta brasil\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|c:\\backup\\faculdade\\computa\u00E7\u00E3o aplicada regionalidade\\conecta-brasil\\conecta brasil\\conecta brasil\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABE62111-879A-4E30-9B6B-08F55B76563A}|CONECTA BRASIL\\CONECTA BRASIL.csproj|solutionrelative:conecta brasil\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -23,6 +32,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "Pessoa.cs",
               "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\Models\\Pessoa.cs",
               "RelativeDocumentMoniker": "CONECTA BRASIL\\Models\\Pessoa.cs",
@@ -31,11 +41,22 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-02T23:29:18.224Z",
+=======
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "CONECTA BRASIL\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-23T22:56:33.742Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< Updated upstream
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\CONECTA BRASIL\\CONECTA BRASIL\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "CONECTA BRASIL\\Models\\Usuario.cs",
@@ -44,6 +65,16 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-02T23:25:25.569Z",
+=======
+              "Title": "HomeViewModel.cs",
+              "DocumentMoniker": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\ViewModels\\HomeViewModel.cs",
+              "RelativeDocumentMoniker": "CONECTA BRASIL\\ViewModels\\HomeViewModel.cs",
+              "ToolTip": "C:\\Backup\\Faculdade\\Computa\u00E7\u00E3o aplicada regionalidade\\Conecta-Brasil\\CONECTA BRASIL\\CONECTA BRASIL\\ViewModels\\HomeViewModel.cs",
+              "RelativeToolTip": "CONECTA BRASIL\\ViewModels\\HomeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T21:31:14.582Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             }
           ]
